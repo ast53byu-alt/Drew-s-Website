@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-label="Education and leadership illustration">
+  <rect width="640" height="420" rx="28" fill="#f8fafc"/>
+  <rect x="50" y="70" width="540" height="280" rx="24" fill="#e0ecff"/>
+  <circle cx="180" cy="170" r="54" fill="#7aa2f7"/>
+  <rect x="145" y="235" width="70" height="90" rx="18" fill="#5b7cfa"/>
+  <rect x="270" y="120" width="230" height="28" rx="14" fill="#334155"/>
+  <rect x="270" y="170" width="210" height="18" rx="9" fill="#64748b"/>
+  <rect x="270" y="204" width="170" height="18" rx="9" fill="#94a3b8"/>
+  <rect x="270" y="248" width="110" height="56" rx="12" fill="#22c55e"/>
+  <path d="M87 320c50-72 123-74 182-31 27 19 53 32 89 18 35-14 58-45 88-63 53-31 113-23 154 24" fill="none" stroke="#9ca3af" stroke-width="10" stroke-linecap="round"/>
+</svg>

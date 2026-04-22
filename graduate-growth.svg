@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-label="Graduate growth illustration">
+  <rect width="640" height="420" rx="30" fill="#f8fbff"/>
+  <rect x="70" y="80" width="500" height="260" rx="24" fill="#dbeafe"/>
+  <circle cx="170" cy="190" r="58" fill="#8b5cf6"/>
+  <path d="M130 185l40-22 40 22-40 22-40-22z" fill="#fff"/>
+  <path d="M150 202v18c0 15 38 22 40 22s40-7 40-22v-18" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <rect x="275" y="125" width="220" height="22" rx="11" fill="#1f2937"/>
+  <rect x="275" y="172" width="180" height="18" rx="9" fill="#475569"/>
+  <rect x="275" y="206" width="150" height="18" rx="9" fill="#64748b"/>
+  <path d="M110 320c74-54 149-54 224-2" fill="none" stroke="#34d399" stroke-width="10" stroke-linecap="round"/>
+  <path d="M335 318c53-70 111-106 177-109" fill="none" stroke="#f59e0b" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="512" cy="205" r="16" fill="#f59e0b"/>
+</svg>

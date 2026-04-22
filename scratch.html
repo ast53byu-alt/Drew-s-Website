@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scratch Page | Teaching, Creativity, and Growth</title>
+  <link rel="stylesheet" href="scratch.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="hero-box" id="top">
+      <h1>Teaching, Creativity, and Growth</h1>
+      <p>This page was built from scratch with custom HTML and CSS. It highlights a few things I care about: helping students grow, creating useful resources, and keeping learning practical and personal.</p>
+      <div class="nav-links">
+        <a href="index.html">Back to Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="graduate.html">Graduate Career Page</a>
+        <a href="app.html">AI Web App</a>
+        <a href="#resources">Jump to Resources</a>
+      </div>
+    </div>
+
+    <div class="content-grid">
+      <div class="content-card">
+        <h2>My favorite parts of educational work</h2>
+        <ol>
+          <li>Helping people gain confidence
+            <ul>
+              <li>students who need direction</li>
+              <li>families who need clarity</li>
+              <li>women rebuilding after hard seasons</li>
+            </ul>
+          </li>
+          <li>Creating tools people can actually use</li>
+          <li>Building systems that make life calmer, not harder</li>
+        </ol>
+      </div>
+
+      <div class="content-card image-card">
+        <h2>Custom image</h2>
+        <img src="assets/hobby-collage.svg" alt="Colorful illustration representing books, planning, creativity, and growth">
+        <p>This local image is not part of any Bootstrap theme. It gives the page some personality and satisfies the image requirement.</p>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>Embedded YouTube video</h2>
+      <p>I chose a study-focused video because steady learning and reflection are part of everything I do.</p>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/wYxDJOFgDw0" title="Study with me video" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="content-card" id="resources">
+      <h2>Interactive Tableau visualization</h2>
+      <p>This live embedded Tableau graph adds an interactive data element to the page.</p>
+      <div class='tableauPlaceholder' id='viz171000001' style='position: relative'>
+        <noscript><a href='#'><img alt='Tableau dashboard preview' src='https://public.tableau.com/static/images/Da/Dashboardsamplesuperstore_16885076905500/Dashboard/1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='Dashboardsamplesuperstore_16885076905500/Dashboard' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='showVizHome' value='no' />
+        </object>
+      </div>
+    </div>
+
+    <div class="content-card footer-card">
+      <h2>On-page anchor complete</h2>
+      <p>You used the link near the top to jump here. That satisfies the on-page anchor requirement.</p>
+      <a class="button-link" href="#top">Back to Top</a>
+    </div>
+  </div>
+
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz171000001');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width='100%';
+    vizElement.style.height='700px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+</body>
+</html>

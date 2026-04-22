@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-label="Creative collage of books, planning, and growth">
+  <rect width="900" height="600" fill="#edf6f9"/>
+  <rect x="70" y="90" width="220" height="300" rx="20" fill="#ffddd2"/>
+  <rect x="110" y="130" width="140" height="24" rx="12" fill="#7f5539"/>
+  <rect x="110" y="176" width="120" height="18" rx="9" fill="#9c6644"/>
+  <rect x="110" y="210" width="95" height="18" rx="9" fill="#9c6644"/>
+  <rect x="340" y="70" width="210" height="210" rx="20" fill="#cdeac0"/>
+  <circle cx="445" cy="175" r="62" fill="#52b788"/>
+  <path d="M445 128v94M398 175h94" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+  <rect x="610" y="100" width="210" height="320" rx="20" fill="#d7e3fc"/>
+  <rect x="650" y="150" width="130" height="18" rx="9" fill="#1d3557"/>
+  <rect x="650" y="190" width="130" height="18" rx="9" fill="#457b9d"/>
+  <rect x="650" y="230" width="130" height="18" rx="9" fill="#457b9d"/>
+  <path d="M160 470c65-52 145-52 210 0" fill="none" stroke="#f4a261" stroke-width="16" stroke-linecap="round"/>
+  <path d="M380 430c28 58 72 93 137 108" fill="none" stroke="#2a9d8f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M530 520c71-18 132-66 183-146" fill="none" stroke="#e76f51" stroke-width="16" stroke-linecap="round"/>
+</svg>

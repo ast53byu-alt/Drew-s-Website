@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Study Support App</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --soft: #1f2937;
+      --text: #f8fafc;
+      --accent: #38bdf8;
+      --accent2: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #1e293b, #0f172a 55%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap {
+      width: min(1000px, 92%);
+      margin: 32px auto;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      background: #334155;
+      padding: 10px 14px;
+      border-radius: 10px;
+    }
+    .hero {
+      background: rgba(17, 24, 39, 0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.28);
+      margin-bottom: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .panel {
+      background: rgba(17, 24, 39, 0.9);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 22px;
+      min-height: 260px;
+    }
+    button {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #0f172a;
+      border: 0;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    textarea, input {
+      width: 100%;
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #475569;
+      background: #0b1220;
+      color: white;
+    }
+    .quote, .prompt, .result {
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #0b1220;
+      border-left: 4px solid var(--accent);
+      line-height: 1.5;
+    }
+    .progress {
+      width: 100%;
+      height: 16px;
+      background: #0b1220;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 14px;
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      transition: width .3s ease;
+    }
+    .small {
+      color: #cbd5e1;
+      font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <h1>AI Study Support App</h1>
+      <div>
+        <a href="scratch.html">Back to Scratch Page</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p>This single-page app was built as the AI-assisted web app for the project. It gives study motivation, reflection prompts, and a quick progress tracker.</p>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Motivation Generator</h2>
+        <p class="small">Click for a fresh study message.</p>
+        <button id="quoteBtn">Generate Motivation</button>
+        <div class="quote" id="quoteBox">You are closer than you think. Small steady work counts.</div>
+      </div>
+
+      <div class="panel">
+        <h2>Reflection Prompt</h2>
+        <p class="small">Use this to reset when you feel stuck.</p>
+        <button id="promptBtn">Give Me a Prompt</button>
+        <div class="prompt" id="promptBox">What is one small action you can finish in the next 15 minutes?</div>
+      </div>
+
+      <div class="panel">
+        <h2>Progress Tracker</h2>
+        <label for="tasks">How many tasks do you want to finish today?</label>
+        <input id="tasks" type="number" min="1" value="5">
+        <label for="done">How many have you finished?</label>
+        <input id="done" type="number" min="0" value="0">
+        <button id="calcBtn">Update Progress</button>
+        <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+        <div class="result" id="resultBox">Progress will appear here.</div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const quotes = [
+      'A calm hour of effort beats a frantic day of avoidance.',
+      'Done is powerful. Start with the next small piece.',
+      'You do not need perfect focus. You need a clear next step.',
+      'Momentum grows when you stop waiting to feel ready.',
+      'Keep going. Quiet progress still counts.'
+    ];
+
+    const prompts = [
+      'What is one small action you can finish in the next 15 minutes?',
+      'What task feels heavy because it is vague, and how can you make it specific?',
+      'What would make today feel successful by bedtime?',
+      'Which assignment is creating stress because you have not started it yet?',
+      'What can you finish before checking your phone again?'
+    ];
+
+    document.getElementById('quoteBtn').addEventListener('click', () => {
+      const quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById('quoteBox').textContent = quote;
+    });
+
+    document.getElementById('promptBtn').addEventListener('click', () => {
+      const prompt = prompts[Math.floor(Math.random() * prompts.length)];
+      document.getElementById('promptBox').textContent = prompt;
+    });
+
+    document.getElementById('calcBtn').addEventListener('click', () => {
+      const tasks = Number(document.getElementById('tasks').value);
+      const done = Number(document.getElementById('done').value);
+      if (!tasks || tasks < 1) {
+        document.getElementById('resultBox').textContent = 'Enter at least 1 total task.';
+        document.getElementById('progressBar').style.width = '0%';
+        return;
+      }
+      const percent = Math.max(0, Math.min(100, Math.round((done / tasks) * 100)));
+      document.getElementById('progressBar').style.width = percent + '%';
+      document.getElementById('resultBox').textContent = `You have finished ${done} out of ${tasks} tasks. That is ${percent}% complete.`;
+    });
+  </script>
+</body>
+</html>
